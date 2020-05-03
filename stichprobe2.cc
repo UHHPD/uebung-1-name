@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -95,5 +94,3 @@ ausdatei.close();
 ausdatei2.close();
 
 }
-
-
