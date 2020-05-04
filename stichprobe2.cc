@@ -63,10 +63,10 @@ int main() {
 
 std::ifstream eindatei("datensumme.txt");
 std::ifstream eindatei2("datensumme.txt");
-std::ifstream eindatei3("mittelwert.txt");
-std::ifstream eindatei4("varianz.txt");
-std::ofstream ausdatei("mittelwert.txt");
-std::ofstream ausdatei2("varianz.txt");
+std::ifstream eindatei3("mittelwerte.txt");
+std::ifstream eindatei4("varianzen.txt");
+std::ofstream ausdatei("mittelwerte.txt");
+std::ofstream ausdatei2("varianzen.txt");
 
 double x = 0;
 double y = 0;
