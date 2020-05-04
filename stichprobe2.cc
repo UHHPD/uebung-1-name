@@ -21,7 +21,7 @@ double varianz (double result, int j) {
   
   mitt = result / j;
   
-  for (double i = 0; i < 234; i++){
+  for (double i = 0; i < 9; i++){
     
     eindatei >> x;
     var += ((x - mitt)*(x - mitt)) / j;
@@ -45,7 +45,7 @@ double standardabweichung (double result, int j){
   
   mitt = result / j;
   
-  for (double i = 0; i < 234; i++){
+  for (double i = 0; i < 9; i++){
     
     eindatei >> x;
     var += ((x - mitt)*(x - mitt)) / j;
@@ -70,14 +70,16 @@ std::ofstream ausdatei2("varianz.txt");
 
 double x = 0;
 double y = 0;
-double result = 0;
 double mittwmitt = 0;
 double mittvarianz = 0;
-int j = 0;
 int f = 0;
 
-for (int h=0; h < 26; h++){
 
+for (int h=0; h < 26; h++){
+  
+  int j = 0;
+  double result = 0;
+  
   for (int i=0; i < 9; i++){
   
     eindatei >> x;
