@@ -25,7 +25,7 @@
       "setup": "g++ -o stichprobe stichprobe.cc",
       "run": "./stichprobe",
       "input": "",
-      "output": "3.11538\r\n2.73455\r\n1.65365",
+      "output": "1.65365",
       "comparison": "included",
       "timeout": 10,
       "points": 100
@@ -45,7 +45,7 @@
       "setup": "g++ -o stichprobe2.cc -o stichprobe2",
       "run": "./stichprobe2",
       "input": "",
-      "output": "3.11538\r\n2.4359",
+      "output": "2.4359",
       "comparison": "included",
       "timeout": 10,
       "points": 500
