@@ -95,9 +95,9 @@ for (int h=0; h < 26; h++){
   
   for (int i=0; i < 9; i++){
   
-  std::ifstream eindatei("datensumme.txt");
+  std::ifstream eindatei2("datensumme.txt");
 
-  eindatei >> z;
+  eindatei2 >> z;
   
   var += ((z - mitt)*(z - mitt)) / j;
   
