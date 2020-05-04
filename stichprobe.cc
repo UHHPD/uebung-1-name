@@ -57,9 +57,9 @@ for (int i=0; i < 234; i++){
 
 }
 
-std::cout << "Mittelwert: " << mittelwert (result,j) << std::endl;
-std::cout << "Varianz: " << varianz (result,x,j) << std::endl;
-std::cout << "Standardabweichung: " <<  standardabweichung (result,x,j) << std::endl;
+std::cout << mittelwert (result,j) << std::endl;
+std::cout << varianz (result,x,j) << std::endl;
+std::cout << standardabweichung (result,x,j) << std::endl;
 
 eindatei.close();
 
