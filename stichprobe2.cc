@@ -12,31 +12,52 @@ double mittelwert (double result, int j){
 
 }
 
-double varianz (double result,double x, int j) {
+double varianz (double result, int j) {
   
+  std::ifstream eindatei("datensumme.txt");
   double var = 0;
   double mitt = 0;
+  double x = 0;
   
   mitt = result / j;
-  var = (x - mitt) * (x - mitt) / j;
-
+  
+  for (double i = 0; i < 234; i++){
+    
+    eindatei >> x;
+    var += ((x - mitt)*(x - mitt)) / j;
+    
+  }
+  
+  eindatei.close();
+  
   return var;
 
 }
 
-/*double standardabweichung (double result, double x, int j){
+double standardabweichung (double result, int j){
 
+  std::ifstream eindatei("datensumme.txt");
+  
   double d = 0; 
   double var = 0;
   double mitt = 0;
+  double x = 0;
   
   mitt = result / j;
-  var = (x - mitt) * (x - mitt) / j;
+  
+  for (double i = 0; i < 234; i++){
+    
+    eindatei >> x;
+    var += ((x - mitt)*(x - mitt)) / j;
+    
+  }
+  
+  eindatei.close();
   
   d = sqrt(var);
 
   return d;
-}*/
+}
 
 int main() {
 
@@ -68,7 +89,7 @@ for (int h=0; h < 26; h++){
   }
   
   ausdatei << mittelwert (result,j) << std::endl;
-  ausdatei2 << varianz (result,x,j) << std::endl;
+  ausdatei2 << varianz (result,j) << std::endl;
   
 }
 
@@ -85,7 +106,7 @@ for (int i =0 ; i< 26; i++){
 }
 
 std::cout <<"Mittelwert von Mittelwert: "<< mittwmitt/f << " Mittelwetrt von stichprobe.cc war: 3.11538 "<<std::endl;
-std::cout <<"Mittelwert von Varianz: " << mittvarianz/f <<" Varianz aus stichprobe.cc war: 0.0355599 "<<std::endl;
+std::cout <<"Mittelwert von Varianz: " << mittvarianz/f <<" Varianz aus stichprobe.cc war: 1.65365 "<<std::endl;
 
 
 eindatei.close();
