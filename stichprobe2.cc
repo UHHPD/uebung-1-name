@@ -80,6 +80,7 @@ for (int h=0; h < 26; h++){
   double result = 0;
   double mitt = 0;
   double var = 0;
+  double z = 0;
   
   for (int i=0; i < 9; i++){
   
@@ -88,12 +89,19 @@ for (int h=0; h < 26; h++){
   
     j++;
     
-    
   }
   
   mitt = result / j;
-  var += ((x - mitt)*(x - mitt)) / j;
   
+  for (int i=0; i < 9; i++){
+  
+  std::ifstream eindatei("datensumme.txt");
+
+  eindatei >> z;
+  
+  var += ((z - mitt)*(z - mitt)) / j;
+  
+  }
   
   ausdatei << mittelwert (result,j) << std::endl;
   ausdatei2 << var << std::endl;
