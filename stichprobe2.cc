@@ -89,8 +89,12 @@ for (int h=0; h < 26; h++){
     j++;
 
     mitt = result / j;
-    var += ((x - mitt)*(x - mitt)) / j;
+    
+    
   }
+  
+  var += ((x - mitt)*(x - mitt)) / j;
+  mitt = result / j;
   
   ausdatei << mittelwert (result,j) << std::endl;
   ausdatei2 << var << std::endl;
