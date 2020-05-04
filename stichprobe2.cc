@@ -94,8 +94,6 @@ for (int h=0; h < 26; h++){
   mitt = result / j;
   
   for (int i=0; i < 9; i++){
-  
-  std::ifstream eindatei2("datensumme.txt");
 
   eindatei2 >> z;
   
