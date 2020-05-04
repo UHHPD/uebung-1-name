@@ -12,7 +12,7 @@ double mittelwert (double result, int j){
 
 }
 
-double varianz (double result, int j) {
+/*double varianz (double result, int j) {
   
   std::ifstream eindatei("datensumme.txt");
   double var = 0;
@@ -25,14 +25,13 @@ double varianz (double result, int j) {
     
     eindatei >> x;
     var += ((x - mitt)*(x - mitt)) / j;
-    
   }
   
   eindatei.close();
   
   return var;
 
-}
+}*/
 
 double standardabweichung (double result, int j){
 
@@ -79,6 +78,8 @@ for (int h=0; h < 26; h++){
   
   int j = 0;
   double result = 0;
+  double mitt = 0;
+  double var = 0;
   
   for (int i=0; i < 9; i++){
   
@@ -87,11 +88,12 @@ for (int h=0; h < 26; h++){
   
     j++;
 
-    
+    mitt = result / j;
+    var += ((x - mitt)*(x - mitt)) / j;
   }
   
   ausdatei << mittelwert (result,j) << std::endl;
-  ausdatei2 << varianz (result,j) << std::endl;
+  ausdatei2 << var << std::endl;
   
 }
 
