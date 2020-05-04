@@ -42,7 +42,7 @@
     },
     {
       "name": "Blatt 2 Aufgabe 2b",
-      "setup": "g++ -o stichprobe2.cc -o stichprobe2",
+      "setup": "g++ stichprobe2.cc -o stichprobe2",
       "run": "./stichprobe2",
       "input": "",
       "output": "2.4359",
